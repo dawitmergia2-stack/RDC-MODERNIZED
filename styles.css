@@ -23,6 +23,79 @@ a{color:var(--accent);text-decoration:none}
 #navMenu a.cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:12px}
 
 /* Hero */
+/* ===== HERO CLEANUP ===== */
+
+.hero {
+    min-height: 520px;
+    padding: 90px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.15;
+    max-width: 950px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.hero p {
+    max-width: 780px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.hero .buttons,
+.hero .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Remove the oversized decorative background text */
+.hero-bg-text,
+.hero-background-text,
+.hero::before {
+    display: none !important;
+}
+
+/* Keep buttons neat */
+.hero a,
+.hero button {
+    white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .hero {
+        min-height: 480px;
+        padding: 70px 18px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+}
 .hero{position:relative;min-height:68vh;display:grid;place-items:center}
 .hero-img{position:absolute;inset:0;width:50%;height:50%;object-fit:cover;filter:brightness(.55);border-bottom-left-radius:18px;border-bottom-right-radius:18px}
 .hero-content{position:relative;color:#fff;text-align:center;padding:24px}
